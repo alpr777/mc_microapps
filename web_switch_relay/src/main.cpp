@@ -109,7 +109,7 @@ void setup(void)
 {
 #if (FLAG_ACTIVE_DEBUG == true)
   Serial.begin(115200);
-  Serial.println(F("\n\nDEBUG: DEVICE > on"));
+  Serial.println(F("\n\nDEBUG: DEVICE > setup"));
 #endif
   server.on("/", webIndex);
   server.on("/on", webActRelayOn);
@@ -118,7 +118,7 @@ void setup(void)
   server.on("/state", webActRelayState);
   server.begin();
 #if (FLAG_ACTIVE_DEBUG == true)
-  Serial.println(F("DEBUG: DEVICE > start"));
+  Serial.println(F("DEBUG: DEVICE > begin"));
 #endif
 }
 
